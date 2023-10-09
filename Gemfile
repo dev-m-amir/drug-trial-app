@@ -52,6 +52,9 @@ gem 'cssbundling-rails', '~> 1.1'
 # Ruby wrapper for Terser JavaScript compressor [https://github.com/ahorek/terser-ruby]
 gem 'terser', '~> 1.1'
 
+# Phonelib is a gem allowing you to validate phone number
+gem 'phonelib'
+
 group :development, :test do
   gem 'rubocop', require: false # A Ruby static code analyzer and formatter, based on the community Ruby style guide.
   gem 'rubocop-performance', require: false # An extension of RuboCop focused on code performance checks.
