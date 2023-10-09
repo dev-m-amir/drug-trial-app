@@ -15,6 +15,8 @@ class VolunteersController < ApplicationController
     end
   end
 
+  def thanks; end
+
   private
 
   def volunteer_params
