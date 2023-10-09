@@ -9,6 +9,8 @@ class VolunteersController < ApplicationController
     @volunteer = Volunteer.new(volunteer_params)
 
     if @volunteer.save
+      HospitalService.send_data(@volunteer)
+
       redirect_to thanks_path
     else
       render :new
