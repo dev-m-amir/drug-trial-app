@@ -30,6 +30,9 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# Ignored gernated sql file
+output.sql
+
 # dotenv
 .env.*.local
 .env.development
