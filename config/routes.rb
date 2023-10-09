@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # Defines the root path route ("/")
-  root "home#index"
+  root 'volunteers#new'
+
+  resources :volunteers, only: [:create]
 
   mount Sidekiq::Web => '/sidekiq'
 end

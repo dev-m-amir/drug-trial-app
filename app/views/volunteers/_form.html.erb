@@ -1,0 +1,35 @@
+<div id='volunteer_create_form'>
+  <%= form_with(model: volunteer, url: volunteers_path, validate: true, html: { class: 'form' }) do |form| %>
+    <div class='mb-3'>
+      <%= form.label :first_name, class: 'form-label' %>
+      <%= form.text_field :first_name, class: 'form-control', placeholder: 'John' %>
+      <%= render 'shared/field_errors', resource: volunteer, field: :first_name %>
+    </div>
+
+    <div class='mb-3'>
+      <%= form.label :last_name, class: 'form-label' %>
+      <%= form.text_field :last_name, class: 'form-control',  placeholder: 'Doe' %>
+      <%= render 'shared/field_errors', resource: volunteer, field: :last_name %>
+    </div>
+
+    <div class='mb-3'>
+      <%= form.label :phone_number, class: 'form-label' %>
+      <%= form.text_field :phone_number, class: 'form-control', placeholder: '+1 (234) 567-8912 OR +12345678912 ' %>
+      <%= render 'shared/field_errors', resource: volunteer, field: :phone_number %>
+    </div>
+
+    <div class='mb-3'>
+      <%= form.label :insurance_carrier, class: 'form-label' %>
+      <%= form.text_field :insurance_carrier, class: 'form-control', placeholder: 'UnitedHealthcare' %>
+      <%= render 'shared/field_errors', resource: volunteer, field: :insurance_carrier %>
+    </div>
+
+    <div class='mb-3'>
+      <%= form.label :medical_id, class: 'form-label' %>
+      <%= form.text_field :medical_id, class: 'form-control', placeholder: '123456789' %>
+      <%= render 'shared/field_errors', resource: volunteer, field: :medical_id %>
+    </div>
+
+    <%= form.submit 'Submit', class: 'btn btn-primary' %>
+  <% end %>
+</div>
